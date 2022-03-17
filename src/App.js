@@ -1,12 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import ShipList from './components/ShipList/ShipList';
+import ShipList from './pages/ShipList/ShipList';
+import StarshipPage from './pages/StarshipPage/StarshipPage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <nav>Star Wars Ships</nav>
-      <ShipList />
+      <Routes>
+        <Route
+          path='/'
+          element={<ShipList />}
+        />
+        <Route
+          path='/starship'
+          element={<StarshipPage />}
+        />
+      </Routes>
     </>
   )
 }
