@@ -12,17 +12,21 @@ const ShipList = () => {
 
   return (
     <>
-      <div>
-        <h1>The Ships are Here</h1>
-        <div className="ships-container">
-          {ships.map((ship) => (
-            <Link to='/starship' key={ship.name} state={{ ship }} >
-              <div >
-                {ship.name}
-              </div>
-            </Link>
-          ))}
-        </div>
+      <div className='main'>
+        {ships.length ?
+          <div className='ships-container'>
+            {ships.map((ship) => (
+              <Link to='/starship' key={ship.name} state={{ ship }} >
+                <div>
+                  {ship.name}
+                </div>
+              </Link>
+            ))}
+          </div>
+          :
+          <p>Loading Ships</p>
+        }
+
       </div>
     </>
   );
