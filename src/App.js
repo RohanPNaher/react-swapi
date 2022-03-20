@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ShipList from './pages/ShipList/ShipList';
 import StarshipPage from './pages/StarshipPage/StarshipPage';

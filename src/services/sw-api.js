@@ -1,7 +1,7 @@
 const baseUrl = 'https://swapi.dev'
 
 export function getShipList() {
-  return fetch(`${baseUrl}/api/starships/`)
+  return fetch(`${baseUrl}/api/starships/?page=2`)
     .then(res => res.json())
 }
 
